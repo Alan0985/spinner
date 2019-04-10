@@ -1,93 +1,51 @@
-.spinner-1:before {
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.spinner:before {
+  display: block;
   content: "";
   box-sizing: border-box;
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  margin-top: -50px;
-  margin-left: -50px;
+  position: relative;
   height: 100px;
   width: 100px;
   border-radius: 50%;
+}
+
+.spinner-1:before {
   border: 12px solid #eee;
   border-top-color: #0ca678;
   animation: spinner 0.8s linear infinite;
 }
 
 .spinner-2:before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  margin-top: -50px;
-  margin-left: -50px;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
   border: 12px solid #eee;
   border-top-color: #0ca678;
   animation: spinner 1.2s ease infinite;
 }
 
 .spinner-3:before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
   border-top: 2px solid #0ca678;
   border-bottom: 2px solid transparent;
   animation: spinner 0.7s linear infinite;
 }
 
 .spinner-4:before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 30%;
-  left: 70%;
-  margin-top: -50px;
-  margin-left: -50px;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
   border-top: 2px solid #0ca678;
   border-right: 2px solid transparent;
   animation: spinner 0.7s linear infinite;
 }
 
 .spinner-5:before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 30%;
-  left: 90%;
-  margin-top: -50px;
-  margin-left: -50px;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
   border: 4px dotted #0ca678;
   animation: spinner 1s linear infinite;
 }
 
 .spinner-6:before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 60%;
-  left: 30%;
-  margin-top: -50px;
-  margin-left: -50px;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
   border: 10px solid #fff;
   border-top-color: #0ca678;
   border-bottom-color: #0ca678;
@@ -95,16 +53,6 @@
 }
 
 .spinner-7:before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 60%;
-  left: 70%;
-  margin-top: -50px;
-  margin-left: -50px;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
   border-top: 2px solid #0ca678;
   border-bottom: 2px solid transparent;
   animation: spinner 1s ease infinite;
@@ -113,5 +61,12 @@
 @keyframes spinner {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .container {
+    flex-direction: column;
+    min-height: 1000px;
   }
 }
